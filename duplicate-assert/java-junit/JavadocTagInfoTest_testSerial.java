@@ -1,35 +1,28 @@
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class JavadocTagInfoTest {
 
     @Test
-    public void testSerial() throws ReflectiveOperationException {
-        final DetailAstImpl ast = new DetailAstImpl();
-        final DetailAstImpl astParent = new DetailAstImpl();
-        astParent.setType(TokenTypes.LITERAL_CATCH);
-        final Method setParent = ast.getClass().getDeclaredMethod("setParent", DetailAstImpl.class);
+    public void testSerial() {
+        DetailAstImpl ast = new DetailAstImpl();
+        DetailAstImpl astParent = new DetailAstImpl();
+        astParent.setType(TokenTypes.LiteralCatch);
+        var setParent = ast.getClass().getDeclaredMethod("setParent", DetailAstImpl.class);
         setParent.setAccessible(true);
         setParent.invoke(ast, astParent);
 
-        final int[] validTypes = {
-            TokenTypes.VARIABLE_DEF,
-        };
-        for (int type: validTypes) {
+        TokenTypes[] validTypes = new TokenTypes[]{TokenTypes.VariableDef};
+        for (TokenTypes type : validTypes) {
             ast.setType(type);
-            assertTrue(JavadocTagInfo.SERIAL.isValidOn(ast),
-                    "Invalid ast type for current tag: " + ast.getType());
+            assertTrue(JavadocTagInfo.Serial.isValidOn(ast), "Invalid ast type for current tag: " + ast.getClass());
         }
 
-        astParent.setType(TokenTypes.SLIST);
-        ast.setType(TokenTypes.VARIABLE_DEF);
-        assertFalse(JavadocTagInfo.SERIAL.isValidOn(ast),
-                "Should return false when ast type is invalid for current tag");
+        astParent.setType(TokenTypes.Slist);
+        ast.setType(TokenTypes.VariableDef);
+        assertFalse(JavadocTagInfo.Serial.isValidOn(ast), "Should return false when ast type is invalid for current tag");
 
-        ast.setType(TokenTypes.PARAMETER_DEF);
-        assertFalse(JavadocTagInfo.SERIAL.isValidOn(ast),
-                "Should return false when ast type is invalid for current tag");
+        ast.setType(TokenTypes.ParameterDef);
+        assertFalse(JavadocTagInfo.Serial.isValidOn(ast), "Should return false when ast type is invalid for current tag");
     }
 }

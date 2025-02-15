@@ -1,9 +1,12 @@
-from pytest import mark
+import pytest
 
-@mark.parametrize("ant_task", [CheckstyleAntTask()])
-def test_create_classpath(ant_task):
-    assert ant_task.createClasspath().toString() == "", "Invalid classpath"
-    
-    ant_task.setClasspath(Path(Project(), "/path"))
-    
-    assert ant_task.createClasspath().toString() == "", "Invalid classpath"
+class TestCheckstyleAntTask(AbstractPathTestSupport):
+
+    def test_create_classpath(self):
+        ant_task = CheckstyleAntTask()
+
+        assert ant_task.create_classpath() == "", "Invalid classpath"
+
+        ant_task.set_classpath(Path(Project(), "/path"))
+
+        assert ant_task.create_classpath() == "", "Invalid classpath"
