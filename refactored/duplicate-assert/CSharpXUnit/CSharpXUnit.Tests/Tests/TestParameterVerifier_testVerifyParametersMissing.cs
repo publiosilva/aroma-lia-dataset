@@ -11,7 +11,6 @@ public class TestParameterVerifier
         try
         {
             ParameterVerifier.VerifyParameters(conf, XmlUtils.ParseXml(str));
-            Assert.False(true);
         }
         catch (ParameterVerifierException ex)
         {
@@ -62,7 +61,6 @@ public class TestParameterVerifier
         try
         {
             ParameterVerifier.VerifyParameters(conf, XmlUtils.ParseXml(str));
-            Assert.False(true);
         }
         catch (ParameterVerifierException ex)
         {

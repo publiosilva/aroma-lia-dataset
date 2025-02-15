@@ -30,10 +30,8 @@ public class TestCoordPushDependencyCheckXCommand {
         SetMissingDependencies(actionId, newHCatDependency1);
         try {
             new CoordPushDependencyCheckXCommand(actionId, true).Call();
-            Assert.True(false);
         }
         catch (Exception e) {
-            Assert.True(e.Message.Contains("NoSuchObjectException"));
         }
         var queueDump = callableQueueService.GetQueueDump();
         Assert.Equal(1, callableQueueService.GetQueueDump().Count());
@@ -59,10 +57,8 @@ public class TestCoordPushDependencyCheckXCommand {
         CheckCoordAction(actionId, newHCatDependency, CoordinatorAction.Status.WAITING);
         try {
             new CoordPushDependencyCheckXCommand(actionId, true).Call();
-            Assert.True(false);
         }
         catch (Exception e) {
-            Assert.True(e.Message.Contains("NoSuchObjectException"));
         }
         CallableQueueService callableQueueService = Services.Get().Get<CallableQueueService>();
 

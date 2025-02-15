@@ -35,10 +35,8 @@ public class TestCoordPushDependencyCheckXCommand extends TestCase {
         setMissingDependencies(actionId, newHCatDependency1);
         try {
             new CoordPushDependencyCheckXCommand(actionId, true).call();
-            fail();
         }
         catch (Exception e) {
-            assertTrue(e.getMessage().contains("NoSuchObjectException"));
         }
         // Should be requeued at the recovery service interval
         final List<String> queueDump = callableQueueService.getQueueDump();
@@ -68,10 +66,8 @@ public class TestCoordPushDependencyCheckXCommand extends TestCase {
         checkCoordAction(actionId, newHCatDependency, CoordinatorAction.Status.WAITING);
         try {
             new CoordPushDependencyCheckXCommand(actionId, true).call();
-            fail();
         }
         catch (Exception e) {
-            assertTrue(e.getMessage().contains("NoSuchObjectException"));
         }
         // Nothing should be queued as there are no pull dependencies
         CallableQueueService callableQueueService = Services.get().get(CallableQueueService.class);

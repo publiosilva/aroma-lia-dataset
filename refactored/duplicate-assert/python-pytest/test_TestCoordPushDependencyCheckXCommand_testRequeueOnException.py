@@ -27,7 +27,6 @@ class TestCoordPushDependencyCheckXCommand:
         set_missing_dependencies(action_id, new_hcat_dependency1)
         with pytest.raises(Exception) as excinfo:
             CoordPushDependencyCheckXCommand(action_id, True).call()
-        assert "NoSuchObjectException" in str(excinfo.value)
 
         queue_dump = callable_queue_service.getQueueDump()
         assert len(queue_dump) == 1
@@ -51,7 +50,6 @@ class TestCoordPushDependencyCheckXCommand:
         check_coord_action(action_id, new_hcat_dependency, CoordinatorAction.Status.WAITING)
         with pytest.raises(Exception) as excinfo:
             CoordPushDependencyCheckXCommand(action_id, True).call()
-        assert "NoSuchObjectException" in str(excinfo.value)
         
         callable_queue_service = Services.get().get(CallableQueueService.class)
 

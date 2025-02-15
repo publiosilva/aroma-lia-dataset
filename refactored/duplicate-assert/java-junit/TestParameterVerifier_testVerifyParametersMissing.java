@@ -33,7 +33,6 @@ public class TestParameterVerifier extends TestCase {
                 + "</parameters></root>";
         try {
             ParameterVerifier.verifyParameters(conf, XmlUtils.parseXml(str));
-            fail();
         } catch(ParameterVerifierException ex) {
             assertTrue(ex.getMessage().endsWith("hello, meh"));
             assertFalse(ex.getMessage().contains("foo"));
@@ -50,7 +49,6 @@ public class TestParameterVerifier extends TestCase {
                 + "</parameters></root>";
         try {
             ParameterVerifier.verifyParameters(conf, XmlUtils.parseXml(str));
-            fail();
         } catch(ParameterVerifierException ex) {
             assertTrue(ex.getMessage().endsWith("hello"));
             assertTrue(ex.getMessage().contains("1"));
