@@ -46,6 +46,6 @@ class TestActionCheckerService:
 
         actions2 = jpa_service.execute(actions_get_executor)
         action2 = next((bean for bean in actions2 if bean.getType() == "test"), None)
-        assert action2 is not None
+        assert action is not None
         assert action2.getStatus() == WorkflowActionBean.Status.RUNNING
         assert engine.getJob(job_id).getStatus() == WorkflowJob.Status.RUNNING
