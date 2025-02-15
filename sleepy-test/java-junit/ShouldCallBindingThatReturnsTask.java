@@ -15,7 +15,7 @@ class StepExecutionTests {
                 Thread.currentThread().interrupt();
             }
         }));
-        await testRunner.givenAsync("Returns a Task");
+        testRunner.givenAsync("Returns a Task");
         assertTrue(taskFinished[0]);
     }
 }
