@@ -1,6 +1,6 @@
 import pytest
 from concurrent.futures import ThreadPoolExecutor, Future, wait, ALL_COMPLETED
-import time
+from time import sleep
 from urllib import request
 
 def test_graceful_shutdown():
@@ -42,7 +42,7 @@ def test_graceful_shutdown():
         if not connector.isOpen():
             shutdown_invoked.set()
             break
-        time.sleep(0.005)
+        sleep(0.005)
 
     result = future_result.result()
     assert result == "test"

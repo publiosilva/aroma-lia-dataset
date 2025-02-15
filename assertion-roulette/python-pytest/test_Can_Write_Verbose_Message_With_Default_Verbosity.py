@@ -1,8 +1,5 @@
 import pytest
 
-class TestLog:
-    # Assume the TestLog class and its functionality are implemented here
-
 def test_can_write_verbose_message_with_default_verbosity():
     # Given
     log = TestLog()

@@ -50,7 +50,7 @@ def test_heartbeat_loss_with_component():
     aq.enqueue(hostname1, ExecutionCommand())
     
     while aq.size(hostname1) != 0:
-        time.sleep(1)
+        sleep(1)
 
     cluster = next(iter(clusters.get_clusters_for_host(hostname1)))
     for sch in cluster.get_service_component_hosts(hostname1):
