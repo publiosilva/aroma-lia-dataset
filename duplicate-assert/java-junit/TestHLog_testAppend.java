@@ -1,4 +1,4 @@
-public class TestHLog extends HBaseTestCase implements HConstants {
+public class TestHLog extends TestCase {
   public void testAppend() throws IOException {
     final int COL_COUNT = 10;
     final byte [] tableName = Bytes.toBytes("tablename");

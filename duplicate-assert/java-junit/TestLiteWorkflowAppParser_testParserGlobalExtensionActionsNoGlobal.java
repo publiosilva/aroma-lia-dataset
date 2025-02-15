@@ -1,4 +1,4 @@
-public class TestLiteWorkflowAppParser extends XTestCase {
+public class TestLiteWorkflowAppParser extends TestCase {
     public void testParserGlobalExtensionActionsNoGlobal() throws Exception {
         LiteWorkflowAppParser parser = new LiteWorkflowAppParser(null,
             LiteWorkflowStoreService.LiteControlNodeHandler.class,

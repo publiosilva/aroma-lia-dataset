@@ -1,4 +1,4 @@
-public class TestMemoryLocks extends XTestCase {
+public class TestMemoryLocks extends TestCase {
     public void testReadLock() throws Exception {
         StringBuffer sb = new StringBuffer("");
         Locker l1 = new ReadLocker("a", 1, -1, sb);

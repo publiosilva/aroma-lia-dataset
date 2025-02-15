@@ -1,4 +1,4 @@
-public class TestCoordActionInputCheckXCommand extends XDataTestCase {
+public class TestCoordActionInputCheckXCommand extends TestCase {
     public void testActionInputCheckLatestActionCreationTime() throws Exception {
         Services.get().getConf().setBoolean(CoordELFunctions.LATEST_EL_USE_CURRENT_TIME, false);
 

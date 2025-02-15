@@ -1,4 +1,4 @@
-public class TestRowResource extends HBaseRESTClusterTestBase {
+public class TestRowResource extends TestCase {
   public void testSingleCellGetPutPB() throws IOException, JAXBException {
     Response response = getValuePB(TABLE, ROW_1, COLUMN_1);
     assertEquals(response.getCode(), 404);

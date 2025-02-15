@@ -1,4 +1,4 @@
-public class TestJMSAccessorService extends XTestCase {
+public class TestJMSAccessorService {
     @Test
     public void testConnectionRetry() throws Exception {
         services.destroy();

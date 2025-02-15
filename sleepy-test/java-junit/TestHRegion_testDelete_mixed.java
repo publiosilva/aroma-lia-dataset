@@ -1,4 +1,4 @@
-public class TestHRegion extends HBaseTestCase {
+public class TestHRegion extends TestCase {
   public void testDelete_mixed() throws IOException {
     byte [] tableName = Bytes.toBytes("testtable");
     byte [] fam = Bytes.toBytes("info");

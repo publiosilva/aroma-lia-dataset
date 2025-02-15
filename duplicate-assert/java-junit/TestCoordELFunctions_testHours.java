@@ -1,4 +1,4 @@
-public class TestCoordELFunctions extends XTestCase {
+public class TestCoordELFunctions extends TestCase {
     public void testHours() throws Exception {
         init("coord-job-submit-freq");
         String expr = "${coord:hours(1)}";

@@ -1,4 +1,4 @@
-public class TestInstrumentation extends XTestCase {
+public class TestInstrumentation extends TestCase {
     public void testCron() throws Exception {
         Instrumentation.Cron cron = new Instrumentation.Cron();
         long start = System.currentTimeMillis();

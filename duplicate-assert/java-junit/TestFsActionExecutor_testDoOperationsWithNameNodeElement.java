@@ -1,4 +1,4 @@
-public class TestFsActionExecutor extends ActionExecutorTestCase {
+public class TestFsActionExecutor extends TestCase {
     public void testDoOperationsWithNameNodeElement() throws Exception {
         FsActionExecutor ae = new FsActionExecutor();
         FileSystem fs = getFileSystem();

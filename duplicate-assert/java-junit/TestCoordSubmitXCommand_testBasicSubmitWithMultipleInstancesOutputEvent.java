@@ -1,4 +1,4 @@
-public class TestCoordSubmitXCommand extends XDataTestCase {
+public class TestCoordSubmitXCommand extends TestCase {
     public void testBasicSubmitWithMultipleInstancesInputEvent() throws Exception {
         Configuration conf = new XConfiguration();
         String appPath = "file://" + getTestCaseDir() + File.separator + "coordinator.xml";

@@ -1,4 +1,4 @@
-public class TestCoordPushDependencyCheckXCommand extends XDataTestCase {
+public class TestCoordPushDependencyCheckXCommand extends TestCase {
     @Test
     public void testRequeueOnException() throws Exception {
         Services.get().getConf().setInt(RecoveryService.CONF_SERVICE_INTERVAL, 6000);

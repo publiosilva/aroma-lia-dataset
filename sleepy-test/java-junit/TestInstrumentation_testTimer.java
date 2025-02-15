@@ -1,4 +1,4 @@
-public class TestInstrumentation extends XTestCase {
+public class TestInstrumentation extends TestCase {
     public void testTimer() throws Exception {
         Instrumentation.Timer timer = new Instrumentation.Timer();
 

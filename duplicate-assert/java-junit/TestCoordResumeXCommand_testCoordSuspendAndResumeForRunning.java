@@ -1,4 +1,4 @@
-public class TestCoordResumeXCommand extends XDataTestCase {
+public class TestCoordResumeXCommand extends TestCase {
     public void testCoordSuspendAndResumeForRunning() throws Exception {
         CoordinatorJobBean job = addRecordToCoordJobTable(CoordinatorJob.Status.RUNNING, false, false);
 

@@ -1,4 +1,4 @@
-public class TestLocalOozie extends XFsTestCase {
+public class TestLocalOozie extends TestCase {
     public void testWorkflowRun() throws Exception {
         String wfApp = "<workflow-app xmlns='uri:oozie:workflow:0.1' name='test-wf'>" +
                 "    <start to='end'/>" +

@@ -1,4 +1,4 @@
-public class TestCoordPushDependencyCheckXCommand extends XDataTestCase {
+public class TestCoordPushDependencyCheckXCommand {
     @Test
     public void testTimeOut() throws Exception {
         String db = "default";

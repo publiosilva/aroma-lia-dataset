@@ -1,4 +1,4 @@
-public class TestURIHandlerService extends XTestCase {
+public class TestURIHandlerService {
     @Test
     public void testGetAuthorityWithScheme() throws Exception {
         URIHandlerService uriService = new URIHandlerService();

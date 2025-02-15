@@ -1,4 +1,4 @@
-public class TestMemoryLocks extends XTestCase {
+public class TestMemoryLocks extends TestCase {
     public void testWaitWriteLock() throws Exception {
         StringBuffer sb = new StringBuffer("");
         Locker l1 = new WriteLocker("a", 1, -1, sb);

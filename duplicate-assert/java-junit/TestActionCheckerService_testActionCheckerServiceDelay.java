@@ -1,4 +1,4 @@
-public class TestActionCheckerService extends XDataTestCase {
+public class TestActionCheckerService extends TestCase {
     public void testActionCheckerServiceDelay() throws Exception {
         Reader reader = IOUtils.getResourceAsReader("wf-ext-schema-valid.xml", -1);
         Writer writer = new FileWriter(getTestCaseDir() + "/workflow.xml");

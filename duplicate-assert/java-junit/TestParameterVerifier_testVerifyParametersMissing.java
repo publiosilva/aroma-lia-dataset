@@ -1,4 +1,4 @@
-public class TestParameterVerifier extends XTestCase {
+public class TestParameterVerifier extends TestCase {
     public void testVerifyParametersMissing() throws Exception {
         Configuration conf = new Configuration(false);
         

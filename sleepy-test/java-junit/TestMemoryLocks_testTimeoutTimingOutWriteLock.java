@@ -1,4 +1,4 @@
-public class TestMemoryLocks extends XTestCase {
+public class TestMemoryLocks extends TestCase {
     public void testTimeoutTimingOutWriteLock() throws Exception {
         StringBuffer sb = new StringBuffer("");
         Locker l1 = new WriteLocker("a", 1, 0, sb);

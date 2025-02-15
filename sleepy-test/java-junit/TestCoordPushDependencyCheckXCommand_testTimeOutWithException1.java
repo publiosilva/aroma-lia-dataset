@@ -1,4 +1,4 @@
-public class TestCoordPushDependencyCheckXCommand extends XDataTestCase {
+public class TestCoordPushDependencyCheckXCommand {
     @Test
     public void testTimeOutWithException1() throws Exception {
         // Test timeout when missing dependencies are from a non existing table
