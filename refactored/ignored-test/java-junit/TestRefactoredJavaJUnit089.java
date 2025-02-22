@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class LiveUnitTestingDirectoryResolverTests {
 
     @Test
-    void tryResolveName_OneFile_FullNameCorrect() {
+    public void tryResolveName_OneFile_FullNameCorrect() {
         // arrange
         var tempDir = ArrangeLiveUnitTestDirectory("Test1.cs");
         var testName = "Test1.Foo";

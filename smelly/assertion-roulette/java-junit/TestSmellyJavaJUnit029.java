@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TargetConfigurationTests {
 
     @Test
-    void wrapperRefTest() {
+    public void wrapperRefTest() {
         LoggingConfiguration c = XmlLoggingConfiguration.createFromXmlString(
                 "<nlog>\n" +
                 "    <targets>\n" +

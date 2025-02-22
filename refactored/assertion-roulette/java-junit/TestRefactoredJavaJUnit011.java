@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class LayoutTypedTests {
 
     @Test
-    void layoutFixedNullIntValueTest() {
+    public void layoutFixedNullIntValueTest() {
         // Arrange
         Integer nullValue = null;
         Layout<Integer> layout = new Layout<>(nullValue);

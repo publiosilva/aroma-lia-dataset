@@ -7,7 +7,7 @@ class ChocolateyUpgraderTests {
 
     @Disabled("")
     @Test
-    void should_Add_SkipIfNotInstalled_Flag_To_Arguments_If_Set() {
+    public void should_Add_SkipIfNotInstalled_Flag_To_Arguments_If_Set() {
         // Given
         ChocolateyUpgraderFixture fixture = new ChocolateyUpgraderFixture();
         fixture.Settings.SkipIfNotInstalled = skipIfNotInstalled;

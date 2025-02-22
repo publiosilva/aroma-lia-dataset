@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class StepExecutionTests {
 
     @Test
-    void shouldCallBindingThatReturnsTask() throws Exception {
+    public void shouldCallBindingThatReturnsTask() throws Exception {
         var testRunnerandBindingMock = getTestRunnerFor(StepExecutionTestsBindings.class);
         boolean[] taskFinished = {false};
         bindingMock.setup(m -> m.returnsATask()).returns(CompletableFuture.runAsync(() -> {

@@ -6,7 +6,7 @@ class TokenControllerTests {
 
     @Disabled
     @Test
-    void createReturnsToken() throws Exception {
+    public void createReturnsToken() throws Exception {
         TokenViewModel vm = new TokenViewModel();
         vm.setEmail("admin@contoso.com");
         vm.setPassword("Pass@word1!");

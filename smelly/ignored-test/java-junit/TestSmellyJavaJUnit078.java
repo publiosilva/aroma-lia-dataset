@@ -5,7 +5,7 @@ class AllEventsQuery_Should {
 
     @Test
     @Disabled
-    void return_all_events() throws Exception {
+    public void return_all_events() throws Exception {
         // Arrange
         List<EventPostDM> posts = Arrays.asList(
             new EventPostDM("well-im-gonna-keep-on-waking", "look"),

@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CursorPagingHandlerTests {
 
     @Test
-    void applyPagination_Before_Last_10() {
+    public void applyPagination_Before_Last_10() {
         // arrange
         Foo[] data = {
             Foo.create(0),

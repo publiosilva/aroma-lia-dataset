@@ -5,7 +5,7 @@ import static org.mockito.Mockito.*;
 class UsersControllerTests {
 
     @Test
-    void shouldGetUserListAsync() throws Exception {
+    public void shouldGetUserListAsync() throws Exception {
         IUserAppService userAppServiceMock = mock(IUserAppService.class);
         when(userAppServiceMock.getListAsync(any(PagedListInput.class))).thenReturn(CompletableFuture.completedFuture(new PagedListResult<UserListOutput>() {{
             setItems(Arrays.asList(new UserListOutput("test_user_1", "test_user_mail_1@mail", UUID.randomUUID()),

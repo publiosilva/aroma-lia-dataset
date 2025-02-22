@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ComponentRenderingTest {
 
     @Test
-    void canUseAddMultipleAttributes() {
+    public void canUseAddMultipleAttributes() {
         {
             var cut = renderComponent(DuplicateAttributesComponent.class);
             var element = cut.find("#duplicate-on-element > div");

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 class UserTests {
 
     @Test
-    void getDomain_WhenCalls_NotImplemented() {
+    public void getDomain_WhenCalls_NotImplemented() {
         throw new UnsupportedOperationException();
     }
 }

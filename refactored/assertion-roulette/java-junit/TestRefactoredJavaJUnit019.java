@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ExternalDataSpecificationTests {
 
     @Test
-    void shouldTransformUnderscoresToSpacesWhenRequiredHeadersHaveSpaces() {
+    public void shouldTransformUnderscoresToSpacesWhenRequiredHeadersHaveSpaces() {
         {
             var sut = createSut(Map.of("product_name", "product"));
             var result = sut.getExampleRecords(new String[]{"product name"});

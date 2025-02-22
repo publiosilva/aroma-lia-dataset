@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 public class EnvTests {
 
     @Test
-    void IsNullOrEmpty_WhenCalls_NotImplemented() {
+    public void IsNullOrEmpty_WhenCalls_NotImplemented() {
         throw new UnsupportedOperationException();
     }
 }

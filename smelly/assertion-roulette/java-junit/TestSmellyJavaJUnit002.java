@@ -5,7 +5,7 @@ import static org.mockito.Mockito.*;
 class EightBitLogicGroupShould {
 
     @Test
-    void andAccumulatorWithRegisterB() {
+    public void andAccumulatorWithRegisterB() {
         IBus fakeBus = mock(IBus.class);
         Map<Short, Byte> program = new HashMap<>();
         program.put((short) 0x0080, (byte) 0xA0); // AND B

@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ImplementTriePrefixTree_208_test {
 
     @Test
-    void Check1() {
+    public void Check1() {
         Trie trie = new Trie();
         trie.insert("hello");
         assertFalse(trie.search("hell"));
