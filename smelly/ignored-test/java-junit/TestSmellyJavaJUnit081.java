@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 public class ChocolateyUpgraderTests {
     
     @Test
-    @Disabled
+    @Ignore
     public void should_Add_SkipDownloadCache_Flag_To_Arguments_If_Set() {
         {
             // Given

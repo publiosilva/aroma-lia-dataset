@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-@Disabled
+@Ignore
 public class LayoutTypedTests {
 
     @Test

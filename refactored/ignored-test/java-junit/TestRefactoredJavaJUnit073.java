@@ -3,7 +3,7 @@ import org.mockito.Mockito;
 
 public class Search {
     @Test
-    // @Disabled
+    // @Ignore
     public void itCallsSearchServiceOnce() {
         // Arrange
         // Act

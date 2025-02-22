@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-// @Disabled
+// @Ignored
 public class EnvTests {
 
     @Test

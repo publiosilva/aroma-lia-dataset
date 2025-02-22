@@ -4,7 +4,7 @@ import static org.mockito.Mockito.*;
 
 class TokenControllerTests {
 
-    @Disabled
+    @Ignore
     @Test
     public void createReturnsToken() throws Exception {
         TokenViewModel vm = new TokenViewModel();

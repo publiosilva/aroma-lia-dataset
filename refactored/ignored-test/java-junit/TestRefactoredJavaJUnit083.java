@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class ChocolateyUpgraderTests {
 
-    // @Disabled("")
+    // @Ignore
     @Test
     public void should_Add_SkipIfNotInstalled_Flag_To_Arguments_If_Set() {
         // Given

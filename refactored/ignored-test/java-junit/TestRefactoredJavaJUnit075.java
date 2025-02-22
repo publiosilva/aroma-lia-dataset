@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
-// @Disabled
+// @Ignore
 public class CallSiteTests {
 
     @Test

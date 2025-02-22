@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ConsoleLogTest {
 
     @Test
-    // @DisabledIf("true") // Replace this with appropriate condition if necessary
+    // @Ignore
     public void testWrite() throws IOException {
         String message = "This is a log message";
         try (FileOutputStream testStream = new FileOutputStream(_testFile);

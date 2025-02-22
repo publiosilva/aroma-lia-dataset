@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ApiIntegrationTests {
 
     @Test
-    @EnabledIf("false") // Replace with the proper condition if needed
+    @Ignore
     public void departmentApi_ReturnsArrayOfDepartmentObjects() throws Exception {
         String url = "/Departments";
         try (var th = initTestServer()) {

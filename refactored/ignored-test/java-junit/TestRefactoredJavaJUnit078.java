@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class AllEventsQuery_Should {
 
     @Test
-    // @Disabled
+    // @Ignore
     public void return_all_events() throws Exception {
         // Arrange
         List<EventPostDM> posts = Arrays.asList(
