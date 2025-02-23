@@ -15,12 +15,12 @@ public class JavadocTagInfoTest {
         TokenTypes[] validTypes = new TokenTypes[]{TokenTypes.VariableDef};
         for (TokenTypes type : validTypes) {
             ast.setType(type);
-            assertTrue(JavadocTagInfo.Serial.isValidOn(ast), "Invalid ast type for current tag: " + ast.getClass());
+            assertTrue("Invalid ast type for current tag: " + ast.getClass(), JavadocTagInfo.Serial.isValidOn(ast));
         }
 
         astParent.setType(TokenTypes.Slist);
         ast.setType(TokenTypes.VariableDef);
-        assertFalse(JavadocTagInfo.Serial.isValidOn(ast), "Should return false when ast type is invalid for current tag");
+        assertFalse("Should return false when ast type is invalid for current tag", JavadocTagInfo.Serial.isValidOn(ast));
     }
 
     @Test
@@ -35,12 +35,12 @@ public class JavadocTagInfoTest {
         TokenTypes[] validTypes = new TokenTypes[]{TokenTypes.VariableDef};
         for (TokenTypes type : validTypes) {
             ast.setType(type);
-            assertTrue(JavadocTagInfo.Serial.isValidOn(ast), "Invalid ast type for current tag: " + ast.getClass());
+            assertTrue("Invalid ast type for current tag: " + ast.getClass(), JavadocTagInfo.Serial.isValidOn(ast));
         }
 
         astParent.setType(TokenTypes.Slist);
         ast.setType(TokenTypes.VariableDef);
         ast.setType(TokenTypes.ParameterDef);
-        assertFalse(JavadocTagInfo.Serial.isValidOn(ast), "Should return false when ast type is invalid for current tag");
+        assertFalse("Should return false when ast type is invalid for current tag", JavadocTagInfo.Serial.isValidOn(ast));
     }
 }
